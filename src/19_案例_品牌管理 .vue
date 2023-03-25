@@ -30,7 +30,8 @@
             :class="类名:布尔值"
             -->
             <td :class="{ red: obj.price > 100 }">{{ obj.price }}</td>
-            <td>{{ obj.time }}</td>
+            <!-- 使用过滤器 -->
+            <td>{{ obj.time | formatDate}}</td>
             <td><a href="#" @click="delFn(obj.id)">删除</a></td>
           </tr>
         </tbody>
@@ -78,6 +79,9 @@
 // 新增品牌
 // 给“添加资产”按钮绑定点击事件
 // v-model数据双项绑定
+
+import moment from "moment"
+
 export default {
   data() {
     return {
@@ -124,6 +128,11 @@ export default {
       this.list.splice(index, 1)
     },
   },
+  filters:{
+    formatDate(val){
+      return moment(val).format('YYYY-MM-DD')
+    }
+  }
 }
 </script>
 
