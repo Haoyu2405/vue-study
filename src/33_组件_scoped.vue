@@ -8,24 +8,12 @@
         各自独立，互不影响，便于复用
    -->
   <div id="app">
-    <h4>案例：折叠面板</h4>
-    <!-- 4.使用组件(局部) -->
-    <!-- <Pannel></Pannel>(对应2） -->
+    <h4>案例：折叠面板</h4>   
     <Pannel></Pannel>
-    <!-- 4.使用组件(全局) -->
-    <PannelG></PannelG>
   </div>
 </template>
 
 <script>
-// 局部组件 （使用较多）
-// 1.创建组件.vue文件
-// 2.引入组件
-// import Pannel(对应1) from './components/组件01_Pannel.vue'
-// 3.注册组件
-// components:{
-//  Pannel（对应2）: Pannel（对应1）,
-// } 
 import Pannel from './components/组件01_Pannel.vue'
 export default {
   components: {
@@ -37,6 +25,15 @@ export default {
   methods: {},
 }
 </script>
+
+<!-- 
+  * Vue组件内样式只针对当前组件内标签生效如何做？
+  * 给style标签添加scoped
+  * 
+  * 原理和过程？
+  * style标签添加scoped，会自动给标签添加data-v-hash值属性，
+  * 所有选择器都被标记
+ -->
 <style lang="less" scoped>
 body {
   background-color: #ccc;

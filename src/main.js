@@ -8,6 +8,13 @@ import "bootstrap/dist/css/bootstrap.css"
 //   setupLocatorUI()
 // }
 
+// 全局组件
+// 1.创建组件.vue文件
+// 2.引入组件
+// import PannelG from './components/组件02_PannelG.vue'
+import PannelG from './components/组件02_PannelG.vue'
+// 3.注册组件
+Vue.component('PannelG', PannelG)
 
 Vue.config.productionTip = false // 在控制台有一句提示消息
 
