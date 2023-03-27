@@ -2,6 +2,13 @@ import Vue from 'vue' // 引入vue对象，类似于<script src="vue.js"></scrip
 import App from './App.vue' // 引入App.vue文件对象(vue项目页面入口)
 import "bootstrap/dist/css/bootstrap.css"
 
+// import setupLocatorUI from '@locator/runtime'
+
+// if (process.env.NODE_ENV === 'development') {
+//   setupLocatorUI()
+// }
+
+
 Vue.config.productionTip = false // 在控制台有一句提示消息
 
 // 过滤器（全局） Vue.filter('过滤器名',函数体)
