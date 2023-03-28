@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  props: ['title', 'price', 'intro'],
+  props: ['index','title', 'price', 'intro'],
   methods:{
     subFn(){
       // eslint-disable-next-line vue/no-mutating-props
@@ -19,6 +19,10 @@ export default {
        *  2.vue规定props“本身”只读的（不允许重新赋值）
        */
       // this.price = this.price - 1
+
+      // 2. this.$emit() 主动触发事件
+      // this.$emit('父组件里的自定义事件名'，子要向父传递的值)
+      this.$emit('subprice',this.index,1)
     }
   }
 }
