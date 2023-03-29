@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import EventBus from '../EventBus/index.js';
 export default {
   props: ['index','title', 'price', 'intro'],
   methods:{
@@ -22,7 +23,10 @@ export default {
 
       // 2. this.$emit() 主动触发事件
       // this.$emit('父组件里的自定义事件名'，子要向父传递的值)
-      this.$emit('subprice',this.index,1)
+      // this.$emit('subprice',this.index,1)
+
+      // 目标：跨组件传值
+      EventBus.$emit('send',this.index,1)
     }
   }
 }
