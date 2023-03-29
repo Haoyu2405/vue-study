@@ -1,11 +1,5 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
-  <!-- eventBus技术
-   * 什么时候使用eventBus技术？
-     当2个没有引用关系的组件之间要通信传值
-   * eventBus技术本质是什么？
-     空白Vue对象，只负责$on和$emit
-  -->
   <ul class="my-product">
     <li v-for="(item, index) in arr" :key="index">
       <span>{{ item.proname }}</span>
