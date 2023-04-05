@@ -5,6 +5,10 @@
    * eventBus技术本质是什么？
      空白Vue对象，只负责$on和$emit
   -->
+
+  <!-- 为什么需要设置 overflow 属性为 hidden 才能正确地包裹这两个元素 -->
+  <!-- 这是因为浮动元素会脱离文档流，不再占据原有的空间，从而导致其父元素无法正确计算高度，进而导致父元素的高度塌陷，影响整个页面布局。
+    通过将包含浮动元素的父容器设置 overflow 属性为 hidden，可以让父容器重新计算高度，以包含浮动元素，从而解决父元素高度塌陷的问题。 -->
   <div style="overflow: hidden;">
     <div style="float: left">
       <MyProduct
