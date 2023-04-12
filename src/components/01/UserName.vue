@@ -13,6 +13,12 @@
 
 <script>
 export default {
+  created() {
+    console.log('UserName组件创建')
+  },
+  destroyed() {
+    console.log('UserName组件销毁')
+  },
   data() {
     return {}
   },

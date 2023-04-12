@@ -6,7 +6,13 @@
     <p>下面显示注册组件:</p>
     <div style="border: 1px solid red">
       <!-- vue内置的组件component，可以动态显示组件 -->
-      <component :is="comName"></component>
+      <!-- <component :is="comName"></component> -->
+
+      <!-- vue内置的keep-alive组件把要缓存的组件包起来 -->
+      <!-- 组件缓存的好处：不会频繁的创建和销毁组件，提升性能使页面更快的呈现 -->
+      <keep-alive>
+         <component :is="comName"></component>
+      </keep-alive>
     </div>
   </div>
 </template>
