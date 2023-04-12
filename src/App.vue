@@ -1,17 +1,20 @@
 <template>
   <div>
-
+    <h1>1.动态dynamic组件使用</h1>
+    <UseDynamic></UseDynamic>
   </div>
 </template>
 
 <script>
+import UseDynamic from './views/01_UseDynamic.vue'
 export default {
-  data () {
+  components: {
+    UseDynamic,
+  },
+  data() {
     return {}
   },
   methods: {},
 }
-
 </script>
-<style scoped>
-</style>
+<style scoped></style>
