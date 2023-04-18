@@ -1,20 +1,15 @@
 <template>
   <div>
-    <h1>组件插槽</h1>
-    <UseTable></UseTable>
+    <input type="text" name="" id="" />
   </div>
 </template>
 
 <script>
-import UseTable from './views/03_UseTable.vue'
 export default {
   data() {
     return {}
   },
   methods: {},
-  components: {
-    UseTable,
-  },
 }
 </script>
 <style scoped></style>
