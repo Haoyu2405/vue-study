@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h1>组件插槽</h1>
-    <UseTable></UseTable>
+    <h1>自定义指令</h1>
+    <UseDirective></UseDirective>
   </div>
 </template>
 
 <script>
-import UseTable from './views/03_UseTable.vue'
+import UseDirective from './views/04_UseDirective.vue'
 export default {
   data() {
     return {}
   },
   methods: {},
   components: {
-    UseTable,
+    UseDirective,
   },
 }
 </script>
